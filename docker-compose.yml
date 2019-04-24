@@ -6,8 +6,7 @@ services:
     ports:
         - "8182:8182"
     environment:
-		FILESYSTEMSOURCE_BASICLOOKUPSTRATEGY_PATH_PREFIX: "/home/kinexis/images/"
-		
+        FILESYSTEMSOURCE_BASICLOOKUPSTRATEGY_PATH_PREFIX: "/home/kinexis/images/"
         ENDPOINT_ADMIN_ENABLED: "false"
         PRINT_STACK_TRACE_ON_ERROR_PAGES: "false"
         ENDPOINT_IIIF_1_ENABLED: "false"

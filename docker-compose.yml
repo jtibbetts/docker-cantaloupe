@@ -6,8 +6,11 @@ services:
     ports:
         - "8182:8182"
     environment:
-        FILESYSTEMSOURCE_BASICLOOKUPSTRATEGY_PATH_PREFIX: "/home/kinexis/images/"
-        ENDPOINT_ADMIN_ENABLED: "false"
+        SOURCE_STATIC: "HttpSource"
+        HTTPSOURCE_BASICLOOKUPSTRATEGY_URL_PREFIX: "http://docker.for.mac.localhost:8080/"
+        ENDPOINT_ADMIN_ENABLED: "true"
+        ENDPOINT_ADMIN_USERNAME: "admin"
+        ENDPOINT_ADMIN_SECRET: "kinexis"
         PRINT_STACK_TRACE_ON_ERROR_PAGES: "false"
         ENDPOINT_IIIF_1_ENABLED: "false"
         ENDPOINT_IIIF_2_ENABLED: "true"

@@ -4,10 +4,11 @@ services:
     container_name: cantaloupe
     image: lyrasis/cantaloupe:latest
     ports:
-        - "8182:8182"
+      - "8182:8182"
     environment:
         SOURCE_STATIC: "HttpSource"
-        HTTPSOURCE_BASICLOOKUPSTRATEGY_URL_PREFIX: "http://docker.for.mac.localhost:8080/"
+        HTTPSOURCE_BASICLOOKUPSTRATEGY_URL_PREFIX: "http://host.docker.internal/ndar_image_cache/"
+        HTTPSOURCE_BASICLOOKUPSTRATEGY_URL_SUFFIX: ".jpg"
         ENDPOINT_ADMIN_ENABLED: "true"
         ENDPOINT_ADMIN_USERNAME: "admin"
         ENDPOINT_ADMIN_SECRET: "kinexis"
